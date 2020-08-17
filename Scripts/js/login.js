@@ -13,21 +13,20 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
-var provider = new firebase.auth.GoogleAuthProvider();
+var uiConfig = {
+    // ログイン完了時のリダイレクト先
+    signInSuccessUrl: 'index.html',
 
-firebase.auth().signInWithPopup(provider).then(function (result) {
-	// This gives you a Google Access Token. You can use it to access the Google API.
-	var token = result.credential.accessToken;
-	// The signed-in user info.
-	var user = result.user;
-	// ...
-}).catch(function (error) {
-	// Handle Errors here.
-	var errorCode = error.code;
-	var errorMessage = error.message;
-	// The email of the user's account used.
-	var email = error.email;
-	// The firebase.auth.AuthCredential type that was used.
-	var credential = error.credential;
-	// ...
-});
+    // 利用する認証機能
+    signInOptions: [
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID
+    ],
+
+    // 利用規約のURL(任意で設定)
+    tosUrl: 'terms.html',
+    // プライバシーポリシーのURL(任意で設定)
+    privacyPolicyUrl: 'privacy.html'
+};
+
+var ui = new firebaseui.auth.AuthUI(firebase.auth());
+ui.start('#firebaseui-auth-container', uiConfig);
