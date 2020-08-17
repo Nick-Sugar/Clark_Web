@@ -5,6 +5,8 @@
 	<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
 	<!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
 	<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-database.js"></script>
 	<script src="Scripts/js/webcam.js"></script>
 	<script src="Scripts/js/chat.js"></script>
 	<title>ClarkForWeb</title>
@@ -16,16 +18,19 @@
 	<!-- チャット -->
 	<div>
 		<div>
-			<input type="text" id="name">
+			Name<br><input type="text" id="name">
 		</div>
+		<br>
 		<div>
-			<textarea id="message" row="10"></textarea>
+			Message<br><textarea id="message" row="10"></textarea><br>
+			<br>
 			<button id="send">send</button>
 		</div>
+		<hr>
 		<div id="output"></div>
 	</div>
 
-	<div><p>V0.003</p></div>
+	<div><p>V0.004</p></div>
 
 </body>
 </html>
