@@ -1,14 +1,31 @@
 <!doctype html>
 <html>
-	<head>
-		<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
-		<script src="Scripts/js/webcam.js"></script>
-		<title>ClarkForWeb</title>
-	</head>
-	<body>
-		<!-- カメラの準備 -->
-		<video id="myVideo" width="400" height="300" autoplay="1" ></video>
-		<div><p>V0.002.1</p></div>
-	</body>
+<head>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+	<!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+	<script src="Scripts/js/webcam.js"></script>
+	<script src="Scripts/js/chat.js"></script>
+	<title>ClarkForWeb</title>
+</head>
+<body>
+	<!-- カメラ -->
+	<video id="myVideo" width="400" height="300" autoplay="1"></video>
+
+	<!-- チャット -->
+	<div>
+		<div>
+			<input type="text" id="name">
+		</div>
+		<div>
+			<textarea id="message" row="10"></textarea>
+			<button id="send">send</button>
+		</div>
+		<div id="output"></div>
+	</div>
+
+	<div><p>V0.003</p></div>
+
+</body>
 </html>
