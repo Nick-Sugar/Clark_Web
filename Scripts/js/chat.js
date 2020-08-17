@@ -15,8 +15,6 @@ firebase.analytics();
 
 
 var database = firebase.database();
-
-var database = firebase.database();
 let room = "chat_room";
 const send = document.getElementById("send");
 const name = document.getElementById("name");
