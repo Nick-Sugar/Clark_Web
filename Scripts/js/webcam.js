@@ -16,7 +16,7 @@
         });
 
 
-const mediaStream = await navigator.mediaDevices
+const mediaStream = navigator.mediaDevices
     .getUserMedia({
       audio: {
         sampleRate: {ideal: 32000},
