@@ -11,7 +11,6 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
 
 var uiConfig = {
     // ログイン完了時のリダイレクト先
