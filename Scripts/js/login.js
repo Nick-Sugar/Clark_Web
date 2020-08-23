@@ -15,3 +15,13 @@ var uiConfig = {
 
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 ui.start('#firebaseui-auth-container', uiConfig);
+
+const logoutBtn = document.getElementById('logout')
+
+logoutBtn.addEventListener('click', () => {
+  firebase.auth().signOut().then(() => {
+    // ¬Œ÷
+  }).catch(err => {
+    // Ž¸”s
+  })
+})
