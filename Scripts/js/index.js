@@ -10,5 +10,6 @@ firebase.auth().onAuthStateChanged( (user) => {
       }
       else {
         h1.innerText = 'Not Login';
+	window.location = "login.html"
       }
     });
