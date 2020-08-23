@@ -13,3 +13,13 @@ firebase.auth().onAuthStateChanged( (user) => {
 	window.location = "login.html"
       }
     });
+
+const logoutBtn = document.getElementById('logout')
+
+logoutBtn.addEventListener('click', () => {
+  firebase.auth().signOut().then(() => {
+    // 成功
+  }).catch(err => {
+    // 失敗
+  })
+})
