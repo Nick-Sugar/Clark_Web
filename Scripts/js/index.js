@@ -23,4 +23,4 @@ logoutBtn.addEventListener('click', () => {
     // 失敗
   })
 })
-}
+});
