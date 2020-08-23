@@ -5,7 +5,7 @@ firebase.auth().onAuthStateChanged( (user) => {
       if(user) {
         h1.innerText   = 'Login Complete!';
         info.innerHTML = `${user.displayName}さんがログインしました<br>` +
-                         `(${user.uid})`;
+                         `(${user.photoURL})`;
         console.log(user);
       }
       else {
@@ -13,7 +13,7 @@ firebase.auth().onAuthStateChanged( (user) => {
 	window.location = "login.html"
       }
     });
-
+document.addEventListener("DOMContentLoaded", function(){
 const logoutBtn = document.getElementById('logout')
 
 logoutBtn.addEventListener('click', () => {
@@ -23,3 +23,4 @@ logoutBtn.addEventListener('click', () => {
     // 失敗
   })
 })
+}
