@@ -1,4 +1,6 @@
-      navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || window.navigator.mozGetUserMedia;
+document.addEventListener("DOMContentLoaded", function () {
+
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || window.navigator.mozGetUserMedia;
       window.URL = window.URL || window.webkitURL;
 
       let video = document.getElementById('myVideo');
@@ -60,4 +62,5 @@ const mediaStream = navigator.mediaDevices
       console.log('width: '+constraints.width)
       console.log('resizeMode: '+constraints.resizeMode)
     }
-  }
+    }
+});
