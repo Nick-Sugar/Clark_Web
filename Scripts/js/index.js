@@ -9,13 +9,8 @@ firebase.auth().onAuthStateChanged( (user) => {
         console.log(user);
       }
       else {
-<<<<<<< HEAD
           h1.innerText = 'Not Login';
           window.location = "login.html"
-=======
-        h1.innerText = 'Not Login';
-        window.location = "login.html"
->>>>>>> 8e108bc978e2bedba80e94fa3455fe19665043e7
       }
     });
 document.addEventListener("DOMContentLoaded", function(){
