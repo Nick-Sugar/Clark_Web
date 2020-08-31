@@ -1,0 +1,69 @@
+p {
+    margin: 0;
+}
+#usercontrol {
+    margin: 0;
+    float: left;
+    width:10%;
+    height:auto;
+}
+.channels {
+    margin: 0;
+    float: left;
+    background-color: lawngreen;
+    width: 100%;
+    height: 80%;
+}
+.userpanel {
+    margin: 0;
+    float: left;
+    background-color: gray;
+    width: 100%;
+    height: 20%;
+}
+#contents {
+    margin: 0;
+    float: left;
+    width: 90%;
+    height: auto;
+}
+#monitor_panel {
+    margin: 0;
+    float: left;
+    width: 80%;
+    height: auto;
+}
+#chat_panel {
+    margin: 0;
+    float: left;
+    width: 20%;
+    height: auto;
+}
+.monitor {
+    margin: 0;
+    float: left;
+    background-color: deeppink;
+    width: 100%;
+    height: 50%;
+}
+.chat {
+    margin: 0;
+    float: left;
+    background-color: orange;
+    width: 100%;
+    height: 50%;
+}
+.controlpanel {
+    margin: 0;
+    float: left;
+    background-color: deepskyblue;
+    width: 100%;
+    height: 50%;
+}
+.inputtext {
+    margin: 0;
+    float: left;
+    background-color: darkviolet;
+    width: 100%;
+    height: 50%;
+}
