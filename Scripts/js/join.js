@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.getElementById("join").onclick = function ()
 {
     if (document.getElementById('roomname').value == "") {
-        alert('ƒ‹[ƒ€–¼‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢');
+        alert('please type room name');
     }
     else
     {
@@ -15,7 +15,7 @@ document.getElementById("join").onclick = function ()
 };
 function roomcheck(roomname)
 {
-    let key = database.ref(databaseRoot + roomname + '/_join_').push({ joined: 'unknown' }).key
+    let key = database.ref("Rooms" + roomname + '/_join_').push({ joined: 'unknown' }).key
 
     clientId = 'member_' + key;
 
