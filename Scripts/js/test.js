@@ -2,6 +2,13 @@ document.addEventListener("DOMContentLoaded", function () {
     
 });
 
+
+function View_Monitor(src) {
+    let localVideo = document.getElementById('local_video');
+    localVideo.srcObject = src;
+}
+
+
 function startVideo() {
     let localStream;
     navigator.mediaDevices.getUserMedia(
@@ -12,7 +19,8 @@ function startVideo() {
         });
     let peer = new RTCPeerConnection({ iceServers: [{ "urls": "stun:stun.l.google.com:19302" }] });
 
-    peer.addStream(localStream);
+    // peer.addStream(localStream);
+    View_Monitor(localStream)
 
 }
 async function startWindow() {
@@ -20,7 +28,7 @@ async function startWindow() {
         let mediaStream = await navigator.mediaDevices.getDisplayMedia({ video: true });
         //videoElement.srcObject = mediaStream;
 
-        let localVideo = document.getElementById('local_video');
+        
 //        localVideo.src = window.URL.createObjectURL(mediaStream);
         localVideo.srcObject = mediaStream;
     } catch (e) {
