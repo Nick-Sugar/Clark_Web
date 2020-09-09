@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let localVideo = document.getElementById('local_video');
+    
 });
 
 function startVideo() {
@@ -10,8 +10,20 @@ function startVideo() {
         function (error) {
             alert("メディアが取得できません");
         });
-    let peer = new RTCPeerConnection({ iceServers: [{ "url": "stun:stun.l.google.com:19302" }] });
+    let peer = new RTCPeerConnection({ iceServers: [{ "urls": "stun:stun.l.google.com:19302" }] });
 
-    peer.AddStream(localStream);
+    peer.addStream(localStream);
 
+}
+async function startWindow() {
+    try {
+        let mediaStream = await navigator.mediaDevices.getDisplayMedia({ video: true });
+        //videoElement.srcObject = mediaStream;
+
+        let localVideo = document.getElementById('local_video');
+//        localVideo.src = window.URL.createObjectURL(mediaStream);
+        localVideo.srcObject = mediaStream;
+    } catch (e) {
+        console.log('Unable to acquire screen capture: ' + e);
+    }
 }
