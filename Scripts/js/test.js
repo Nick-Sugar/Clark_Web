@@ -11,9 +11,9 @@ function View_Monitor(src) {
         localVideo.play();
     };
 }
-function stopVideo() {
+function stopVideo(src) {
     let localVideo = document.getElementById('local_video');
-    for (track of localStream.getTracks()) {
+    for (track of src.getTracks()) {
         track.stop();
     }
     localStream = null;
