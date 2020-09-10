@@ -49,7 +49,7 @@ async function startWindow() {
     try {
         let mediaStream = await navigator.mediaDevices.getDisplayMedia({ video: true });
         //videoElement.srcObject = mediaStream;
-
+        localStream = mediaStream;
         let localVideo = document.getElementById('local_video');
         //localVideo.src = window.URL.createObjectURL(mediaStream);
         
