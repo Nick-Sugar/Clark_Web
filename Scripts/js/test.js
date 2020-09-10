@@ -7,13 +7,27 @@ function View_Monitor(src) {
     let localVideo = document.getElementById('local_video');
     console.log("camID:" + src)
     localVideo.srcObject = src;
+    localVideo.onloadedmetadata = function (e) {
+        localVideo.play();
+    };
 }
+function stopVideo() {
+    let localVideo = document.getElementById('local_video');
+    for (track of localStream.getTracks()) {
+        track.stop();
+    }
+    localStream = null;
 
+    localVideo.pause();
+    window.URL.revokeObjectURL(localVideo.src);
+    localVideo.src = '';
+}
 
 function startVideo() {
 
     navigator.getUserMedia({ video: true, audio: false },
-        function (stream) { // for success case
+        function (stream) {
+            // for success case
             console.log(stream);
             peer.addStream(stream);
             View_Monitor(stream);
