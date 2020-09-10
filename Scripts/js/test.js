@@ -49,11 +49,12 @@ async function startWindow() {
     try {
         let mediaStream = await navigator.mediaDevices.getDisplayMedia({ video: true });
         //videoElement.srcObject = mediaStream;
-        localStream = mediaStream;
-        let localVideo = document.getElementById('local_video');
+        //localStream = mediaStream;
+        //let localVideo = document.getElementById('local_video');
         //localVideo.src = window.URL.createObjectURL(mediaStream);
         
-        localVideo.srcObject = mediaStream;
+        //localVideo.srcObject = mediaStream;
+        View_Monitor(mediaStream);
     } catch (e) {
         console.log('Unable to acquire screen capture: ' + e);
     }
