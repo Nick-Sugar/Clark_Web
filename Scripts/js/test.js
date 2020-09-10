@@ -1,3 +1,5 @@
+let localStream;
+
 document.addEventListener("DOMContentLoaded", function () {
     
 });
@@ -7,13 +9,14 @@ function View_Monitor(src) {
     let localVideo = document.getElementById('local_video');
     console.log("camID:" + src)
     localVideo.srcObject = src;
+    localStream = src;
     localVideo.onloadedmetadata = function (e) {
         localVideo.play();
     };
 }
 function stopVideo(src) {
     let localVideo = document.getElementById('local_video');
-    for (track of src.getTracks()) {
+    for (track of localStream.getTracks()) {
         track.stop();
     }
     localStream = null;
