@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function View_Monitor(src) {
     let localVideo = document.getElementById('local_video');
+    console.log("camID:" + src)
     localVideo.srcObject = src;
 }
 
