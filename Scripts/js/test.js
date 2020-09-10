@@ -30,7 +30,7 @@ async function startWindow() {
         //videoElement.srcObject = mediaStream;
 
         let localVideo = document.getElementById('local_video');
-        localVideo.src = window.URL.createObjectURL(mediaStream);
+        //localVideo.src = window.URL.createObjectURL(mediaStream);
         
         localVideo.srcObject = mediaStream;
     } catch (e) {
