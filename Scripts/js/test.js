@@ -11,18 +11,21 @@ function View_Monitor(src) {
 
 
 function startVideo() {
-    navigator.mediaDevices.getUserMedia(
-        { video: true, audio: true },
-        function (stream) {
+
+    navigator.getUserMedia({ video: true, audio: false },
+        function (stream) { // for success case
+            console.log(stream);
             peer.addStream(stream);
             View_Monitor(stream);
         },
-        function (error) {
+        function (err) {
+            // for error case
+            console.log(err);
             alert("メディアが取得できません");
         });
+
     let peer = new RTCPeerConnection({ iceServers: [{ "urls": "stun:stun.l.google.com:19302" }] });
     // peer.addStream(localStream);
-    
 
 }
 async function startWindow() {
