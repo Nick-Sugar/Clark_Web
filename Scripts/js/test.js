@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
 });
 
-
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || window.navigator.mozGetUserMedia;
 function View_Monitor(src) {
     let localVideo = document.getElementById('local_video');
     console.log("camID:" + src)

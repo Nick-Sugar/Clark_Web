@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || window.navigator.mozGetUserMedia;
+    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || window.navigator.mozGetUserMedia;
+
       window.URL = window.URL || window.webkitURL;
 
       let video = document.getElementById('myVideo');
