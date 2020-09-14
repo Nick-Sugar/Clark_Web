@@ -7,7 +7,7 @@ body{
 #usercontrol {
     margin: 0;
     float: left;
-    width:10vw;
+    width:10%;
     height:auto;
 }
 .channels {
@@ -37,7 +37,7 @@ body{
 #contents {
     margin: 0;
     float: left;
-    width: 90vw;
+    width: 90%;
     height: auto;
 }
 #monitor_panel {
